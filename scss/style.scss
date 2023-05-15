@@ -1,0 +1,16 @@
+$color1:#81c09f;
+$color2:#9ad0b7;
+$color3:#b3e0cf;
+$color4:#ccefe7;
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+
+@import "./header/header";
+@import "./form/info";
+@import "./footer";

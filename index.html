@@ -4,9 +4,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Proyecto CRUD</title>
+    <link rel="stylesheet" href="./scss/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <header class="header">
+        <img src="./img/logo.png" alt="logo" class="header__icon">
+    </header>
+    <main class="main">
+        <div class="control">
+            <div class="register">
+                <div class="register__info">
+                    <div class="register__info-content register__info-content--1">
+                        <label for="name" class="register__label-name">Ingrese nombre:</label>
+                        <input type="text" class="register__input-name" id="name">
+                    </div>
+                    <div class="register__info-content register__info-content--2">
+                        <label for="lastName" class="register__label-name">Ingrese Apellido:</label>
+                        <input type="text" class="register__lastName" id="lastName">
+                    </div>
+                    <div class="register__info-content register__info-content--3">
+                        <label for="cellphone" class="register__label-name">Ingrese telefono:</label>
+                        <input type="text" class="register__cellphone" id="cellphone">
+                    </div>
+                    <div class="register__info-content register__info-content--4">
+                        <select name="espe" id="especialidad">
+                            <option value="medico/a">Medico/a</option>
+                            <option value="ginecologo/a">Ginecologo/a</option>
+                            <option value="cardiologo/a">Cardiologo/a</option>
+                            <option value="enfermero/a">Enfermero/a</option>
+                        </select>
+                    </div>
+                    <div class="register__info-content register__info-content--5">
+                        <label for="women" class="register__checks-option">Women</label>
+                        <input type="radio" class="register__checks-circle" name="sex" id="women">
+                        <label for="man" class="register__checks-option">Man</label>
+                        <input type="radio" class="register__checks-circle" name="sex" id="man">
+                    </div>
+                    <div class="register__info-content register__info-content--6">
+                        <input type="file" name="" id="imagen" class="register__info-image">
+                        <button>agregar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="table">
+                <table>
+                    <thead>
+                        <th>Imagen</th>
+                        <th>Information</th>
+                        <th>Estado</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="view">
+
+            </div>
+        </div>
+    </main>
+    <footer class=footer>
+
+    </footer>
 </body>
 </html>
