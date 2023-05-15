@@ -14,7 +14,7 @@
         justify-content: center;
         align-content: center;
         grid-template-columns: 60% 30%;
-        grid-template-rows: 30% 30% 30%;
+        grid-template-rows: repeat(3,30%);
         gap: 10px;
         grid-template-areas: 
         "registro vista"
@@ -31,12 +31,92 @@
                 height: 100%;
                 display: flex;
                 flex-flow: row wrap;
+                justify-content: center;
+                .register__info-form{
+                    display: flex;
+                    width: 20%;
+                    height: 100%;
+                    margin-left: 20px;
+                    flex-flow: column wrap;
+                    justify-content: space-evenly;
+                    .register__info-content{
+                        width: 100%;
+                        height: 30%;
+                        display: flex;
+                        flex-flow: column wrap;
+                        align-items: center;
+                        justify-content:space-around;
+                        .register__label-input{
+                            width: 100%;
+                            height: 20%;
+                            position: relative;
+                            font-size: 0.8rem;
+                        }
+                        .register__input-input{
+                            width: 100%;
+                            height: 50%;
+                            outline: none;
+                            border: none;
+                            border-radius: 10px;
+                            padding: 0px 20px;
+                        }
+                      
+                    }
+                    .register__info-content-imagen{
+                        height: 90%;
+                        .register__info-img{
+                            width: 60%;
+                            height: 75%;
+                        }
+                        .register__info-button{
+                            width: 40%;
+                            height: 20%;
+                            border: none;
+                            border-radius: 10px;
+                            border: solid #000 2px;
+                            transition: border .2s;
+                            cursor: pointer;
+                            background: $color4;
+                        }
+                        .register__info-button:hover{
+                            border: inset #000 2px;
+                        }
+                    }
+                    .register__info-content-position{
+                        width: 100%;
+                        height: 20%;
+                        display: flex;
+                        flex-flow: column wrap;
+                        justify-content: end;
+                    }
+                    .register__info-content--height{
+                        height: 45%;
+                        width: 100%;
+                        display: flex;
+                        flex-flow: column wrap;
+                        justify-content: center;
+                    
+                    }
+                }
+                .register__info-form--width{
+                    width: 15%;
+                }
             }
             
         }
         .table{
             grid-area: tabla;
-            @extend .register
+            @extend .register;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            .table__table{
+                width: 95%;
+                height: 95%;
+                border-radius: 20px;
+                border: #615c5c solid 1px;
+            }
         }
         .view{
             grid-area: vista;

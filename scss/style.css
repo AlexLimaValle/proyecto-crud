@@ -34,7 +34,7 @@
   justify-content: center;
   align-content: center;
   grid-template-columns: 60% 30%;
-  grid-template-rows: 30% 30% 30%;
+  grid-template-rows: repeat(3, 30%);
   gap: 10px;
   grid-template-areas: "registro vista" "tabla vista" "tabla vista";
 }
@@ -49,9 +49,87 @@
   height: 100%;
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
+}
+.main .control .register .register__info .register__info-form, .main .control .view .register__info .register__info-form, .main .control .table .register__info .register__info-form {
+  display: flex;
+  width: 20%;
+  height: 100%;
+  margin-left: 20px;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+}
+.main .control .register .register__info .register__info-form .register__info-content, .main .control .view .register__info .register__info-form .register__info-content, .main .control .table .register__info .register__info-form .register__info-content {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.main .control .register .register__info .register__info-form .register__info-content .register__label-input, .main .control .view .register__info .register__info-form .register__info-content .register__label-input, .main .control .table .register__info .register__info-form .register__info-content .register__label-input {
+  width: 100%;
+  height: 20%;
+  position: relative;
+  font-size: 0.8rem;
+}
+.main .control .register .register__info .register__info-form .register__info-content .register__input-input, .main .control .view .register__info .register__info-form .register__info-content .register__input-input, .main .control .table .register__info .register__info-form .register__info-content .register__input-input {
+  width: 100%;
+  height: 50%;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  padding: 0px 20px;
+}
+.main .control .register .register__info .register__info-form .register__info-content-imagen, .main .control .view .register__info .register__info-form .register__info-content-imagen, .main .control .table .register__info .register__info-form .register__info-content-imagen {
+  height: 90%;
+}
+.main .control .register .register__info .register__info-form .register__info-content-imagen .register__info-img, .main .control .view .register__info .register__info-form .register__info-content-imagen .register__info-img, .main .control .table .register__info .register__info-form .register__info-content-imagen .register__info-img {
+  width: 60%;
+  height: 75%;
+}
+.main .control .register .register__info .register__info-form .register__info-content-imagen .register__info-button, .main .control .view .register__info .register__info-form .register__info-content-imagen .register__info-button, .main .control .table .register__info .register__info-form .register__info-content-imagen .register__info-button {
+  width: 40%;
+  height: 20%;
+  border: none;
+  border-radius: 10px;
+  border: solid #000 2px;
+  transition: border 0.2s;
+  cursor: pointer;
+  background: #ccefe7;
+}
+.main .control .register .register__info .register__info-form .register__info-content-imagen .register__info-button:hover, .main .control .view .register__info .register__info-form .register__info-content-imagen .register__info-button:hover, .main .control .table .register__info .register__info-form .register__info-content-imagen .register__info-button:hover {
+  border: inset #000 2px;
+}
+.main .control .register .register__info .register__info-form .register__info-content-position, .main .control .view .register__info .register__info-form .register__info-content-position, .main .control .table .register__info .register__info-form .register__info-content-position {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: end;
+}
+.main .control .register .register__info .register__info-form .register__info-content--height, .main .control .view .register__info .register__info-form .register__info-content--height, .main .control .table .register__info .register__info-form .register__info-content--height {
+  height: 45%;
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+.main .control .register .register__info .register__info-form--width, .main .control .view .register__info .register__info-form--width, .main .control .table .register__info .register__info-form--width {
+  width: 15%;
 }
 .main .control .table {
   grid-area: tabla;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+.main .control .table .table__table {
+  width: 95%;
+  height: 95%;
+  border-radius: 20px;
+  border: #615c5c solid 1px;
 }
 .main .control .view {
   grid-area: vista;

@@ -20,20 +20,20 @@
                 <div class="register__info">
                     <div class="register__info-form">
                         <div class="register__info-content register__info-content--1">
-                            <label for="name" class="register__label-name">Ingrese nombre:</label>
-                            <input type="text" class="register__input-name" id="name">
+                            <label for="name" class="register__label-input">Ingrese nombre:</label>
+                            <input type="text" class="register__input-input" id="name">
                         </div>
                         <div class="register__info-content register__info-content--2">
-                            <label for="lastName" class="register__label-name">Ingrese Apellido:</label>
-                            <input type="text" class="register__lastName" id="lastName">
+                            <label for="lastName" class="register__label-input">Ingrese Apellido:</label>
+                            <input type="text" class="register__input-input" id="lastName">
                         </div>
                         <div class="register__info-content register__info-content--3">
-                            <label for="cellphone" class="register__label-name">Ingrese telefono:</label>
-                            <input type="text" class="register__cellphone" id="cellphone">
+                            <label for="cellphone" class="register__label-input">Ingrese telefono:</label>
+                            <input type="text" class="register__input-input" id="cellphone">
                         </div>
                     </div>
-                    <div class="register__info-form">
-                        <div class="register__info-content register__info-content--4">
+                    <div class="register__info-form register__info-form--width">
+                        <div class="register__info-content register__info-content-position">
                             <select name="espe" id="especialidad">
                                 <option value="medico/a">Medico/a</option>
                                 <option value="ginecologo/a">Ginecologo/a</option>
@@ -41,7 +41,7 @@
                                 <option value="enfermero/a">Enfermero/a</option>
                             </select>
                         </div>
-                        <div class="register__info-content register__info-content--5">
+                        <div class="register__info-content register__info-content-position register__info-content--height">
                             <label for="women" class="register__checks-option">Women</label>
                             <input type="radio" class="register__checks-circle" name="sex" id="women">
                             <label for="man" class="register__checks-option">Man</label>
@@ -49,15 +49,15 @@
                         </div>
                     </div>
                     <div class="register__info-form">
-                        <div class="register__info-content register__info-content--6">
-                            <input type="file" name="" id="imagen" class="register__info-image">
-                            <button>agregar</button>
+                        <div class="register__info-content register__info-content-imagen">
+                            <img src="./img/user.png" alt="usuario" class="register__info-img">
+                            <button class="register__info-button">Agregar</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="table">
-                <table>
+                <table class="table__table">
                     <thead>
                         <th>Imagen</th>
                         <th>Information</th>
