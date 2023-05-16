@@ -94,12 +94,8 @@
   border: none;
   border-radius: 10px;
   border: solid #000 2px;
-  transition: border 0.2s;
   cursor: pointer;
-  background: #ccefe7;
-}
-.main .control .register .register__info .register__info-form .register__info-content-imagen .register__info-button:hover, .main .control .view .register__info .register__info-form .register__info-content-imagen .register__info-button:hover, .main .control .table .register__info .register__info-form .register__info-content-imagen .register__info-button:hover {
-  border: inset #000 2px;
+  background: #fff;
 }
 .main .control .register .register__info .register__info-form .register__info-content-position, .main .control .view .register__info .register__info-form .register__info-content-position, .main .control .table .register__info .register__info-form .register__info-content-position {
   width: 100%;
@@ -125,11 +121,54 @@
   justify-content: center;
   align-items: center;
 }
-.main .control .table .table__table {
+.main .control .table .table__container {
   width: 95%;
   height: 95%;
-  border-radius: 20px;
-  border: #615c5c solid 1px;
+  overflow: auto;
+}
+.main .control .table .table__container .table__table {
+  width: 100%;
+  height: auto;
+}
+.main .control .table .table__container .table__table .table__tr {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.main .control .table .table__container .table__table .table__tr .table__th {
+  width: 33%;
+  height: 40px;
+  border-bottom: #b3e0cf solid 2px;
+}
+.main .control .table .table__container .table__table .table__tr .table__td {
+  border-bottom: #b3e0cf solid 1px;
+  width: 33%;
+  height: 80px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+.main .control .table .table__container .table__table .table__tr .table__td .table__avatar {
+  width: 35%;
+  height: 85%;
+  border-radius: 5px;
+}
+.main .control .table .table__container .table__table .table__tr .table__td--display {
+  display: flex;
+  flex-flow: row wrap;
+}
+.main .control .table .table__container .table__table .table__tr .table__td--display .table__button {
+  width: 15%;
+  height: 50%;
+  margin-left: 10px;
+  padding: 3px 3px;
+  border-radius: 10px;
+  background: #fcfcfc;
+}
+.main .control .table .table__container .table__table .table__tr .table__td--display .table__button .table__button-img {
+  width: 85%;
+  height: 75%;
 }
 .main .control .view {
   grid-area: vista;
