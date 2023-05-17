@@ -4,3 +4,4 @@ el proyecto en cuestion trata de simular una lista de personajes que seran agreg
 
 por un usuario, el cual tambien tendra la mision de cambiar, eliminar, y subir nuevos profesionales
 
+## Se pondra una boton para borrar, cambiar y mostrar
