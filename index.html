@@ -41,11 +41,11 @@
                                 <option value="enfermero/a">Enfermero/a</option>
                             </select>
                         </div>
-                        <div class="register__info-content register__info-content-position register__info-content--height">
-                            <label for="women" class="register__checks-option">Women</label>
-                            <input type="radio" class="register__checks-circle" name="sex" id="women">
-                            <label for="man" class="register__checks-option">Man</label>
-                            <input type="radio" class="register__checks-circle" name="sex" id="man">
+                        <div class="register__info-content register__info-content-position register__info-content--height" id="radios">
+                            <label for="mujer" class="register__checks-option">Mujer</label>
+                            <input type="radio" class="register__checks-circle" name="sex" id="mujer" value="mujer">
+                            <label for="hombre" class="register__checks-option">Hombre</label>
+                            <input type="radio" class="register__checks-circle" name="sex" id="hombre" value="hombre">
                         </div>
                     </div>
                     <div class="register__info-form">
@@ -68,7 +68,13 @@
                             <td class="table__td">
                                 <img src="./img/avatar-1.jfif"  alt="avatar-1" class="table__avatar">
                             </td>
-                            <td class="table__td">2</td>
+                            <td class="table__td">
+                                <ul class="table__ul">
+                                    <li class="table__li">Amanda carter</li>
+                                    <li class="table__li">Enfermero/a</li>
+                                    <li class="table__li">Mujer</li>
+                                </ul>
+                            </td>
                             <td class="table__td table__td--display">
                                 <button class="table__button">
                                     <img src="./img/pencil.png" alt="lapiz" class="table__button-img">
