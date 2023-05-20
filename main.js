@@ -7,23 +7,20 @@ const input_select = document.getElementById("especialidad");
 const input_radio_1 = document.getElementById("mujer");
 const input_radio_2 = document.getElementById("hombre");
 
-let users = [];
+let users = JSON.parse(localStorage.getItem("medicos")) || [];
 
-const fregamento_table = document.createDocumentFragment();
-
-const getAddTr = (list)=>{
-    list.forEach((e)=>{
+const getAddTr = (objeto)=>{
         const nuevo_tr = document.createElement("tr");
         nuevo_tr.setAttribute("class","table__tr");
         nuevo_tr.innerHTML = `
         <td class="table__td">
-             <img src="./img/avatar-1.jfif"  alt="avatar-1" class="table__avatar">
+             <img src="./img/medico-${objeto.sex}.png"  alt="avatar-1" class="table__avatar">
         </td>
         <td class="table__td">
              <ul class="table__ul">
-               <li class="table__li">${e.name} ${e.lastname}</li>
-               <li class="table__li">${e.espe}</li>
-               <li class="table__li">${e.sex}</li>
+               <li class="table__li">${objeto.name} ${objeto.lastname}</li>
+               <li class="table__li">${objeto.espe}</li>
+               <li class="table__li">${objeto.sex}</li>
             </ul>
         </td>
         <td class="table__td table__td--display">
@@ -39,8 +36,11 @@ const getAddTr = (list)=>{
         </td>
         `;
          table.appendChild(nuevo_tr);
-    });
 }
+
+users.forEach(e=>{
+    getAddTr(e);
+})
 
 const getAddInfo = (event)=>{
     const {target} = event;
@@ -58,8 +58,10 @@ const getAddInfo = (event)=>{
                 espe:input_select.value,
                 sex:valor_radio
         };
-        users = [data,...users];  
-        getAddTr(users);
+        users = [...users,data];  
+        let storage = JSON.stringify(users);
+        localStorage.setItem("medicos",storage);
+        getAddTr(data);
         input_name.value = "";
         input_lastName.value = "";
         input_tel.value = "";
@@ -69,7 +71,6 @@ const getAddInfo = (event)=>{
     }
 }
 // no pasa los nueva data al array es por eso que no puede aplicar el forEach, ya que el array llega vacío
-console.log(users);
 register.addEventListener("click",getAddInfo);
 
 

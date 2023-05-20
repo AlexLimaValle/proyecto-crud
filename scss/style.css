@@ -154,6 +154,9 @@
   height: 85%;
   border-radius: 5px;
 }
+.main .control .table .table__container .table__table .table__tr .table__td .table__ul {
+  list-style-type: none;
+}
 .main .control .table .table__container .table__table .table__tr .table__td--display {
   display: flex;
   flex-flow: row wrap;
