@@ -96,6 +96,11 @@
   border: solid #000 2px;
   cursor: pointer;
   background: #fff;
+  transition: background 0.5s;
+}
+.main .control .register .register__info .register__info-form .register__info-content-imagen .register__info-button:hover, .main .control .view .register__info .register__info-form .register__info-content-imagen .register__info-button:hover, .main .control .table .register__info .register__info-form .register__info-content-imagen .register__info-button:hover {
+  background: #0080ff;
+  color: #fff;
 }
 .main .control .register .register__info .register__info-form .register__info-content-position, .main .control .view .register__info .register__info-form .register__info-content-position, .main .control .table .register__info .register__info-form .register__info-content-position {
   width: 100%;

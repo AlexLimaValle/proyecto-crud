@@ -8,10 +8,12 @@ const input_radio_1 = document.getElementById("mujer");
 const input_radio_2 = document.getElementById("hombre");
 
 let users = JSON.parse(localStorage.getItem("medicos")) || [];
+let numero = 1
 
 const getAddTr = (objeto)=>{
         const nuevo_tr = document.createElement("tr");
         nuevo_tr.setAttribute("class","table__tr");
+        nuevo_tr.setAttribute("id",`${numero = numero + 1}`);
         nuevo_tr.innerHTML = `
         <td class="table__td">
              <img src="./img/medico-${objeto.sex}.png"  alt="avatar-1" class="table__avatar">
@@ -27,11 +29,11 @@ const getAddTr = (objeto)=>{
             <button class="table__button">
                 <img src="./img/pencil.png" alt="lapiz" class="table__button-img">
             </button>
-            <button class="table__button">
-                <img src="./img/trash.png" alt="lapiz" class="table__button-img">
+            <button class="table__button table__button-delete">
+                <img src="./img/trash.png" alt="tacho" class="table__button-img">
             </button>
             <button class="table__button">
-                <img src="./img/user.png" alt="lapiz" class="table__button-img">
+                <img src="./img/user.png" alt="usuario" class="table__button-img">
             </button>
         </td>
         `;
@@ -73,7 +75,18 @@ const getAddInfo = (event)=>{
 // no pasa los nueva data al array es por eso que no puede aplicar el forEach, ya que el array llega vacío
 register.addEventListener("click",getAddInfo);
 
-
+table.addEventListener("click",(e)=>{
+    const {target} = e;
+    if(target.classList.contains("table__button-delete")){
+        const padre = target.parentElement;
+        const abuelo = padre.parentElement;
+        abuelo.remove();
+        if(abuelo.getAttribute("id")!=1){
+            users.splice(abuelo.getAttribute("id")-2,1);
+            console.log(users);
+        }
+    }
+}) 
 
 
 

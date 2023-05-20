@@ -76,6 +76,11 @@
                             border: solid #000 2px;
                             cursor: pointer;
                             background: #fff;
+                            transition: background .5s;
+                        }
+                        .register__info-button:hover{
+                            background: #0080ff;
+                            color:#fff;
                         }
                     }
                     .register__info-content-position{
